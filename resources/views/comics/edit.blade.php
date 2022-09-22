@@ -6,7 +6,7 @@
 <h1>modifica fumetto</h1>
 <button><a href="{{route('home')}}">torna indietro</a></button>
 
-<form action="{{route('comics.store')}}" method="POST">
+<form action="{{route('comics.update', $comic->id)}}" method="POST">
     @csrf
     @method('PUT')
 

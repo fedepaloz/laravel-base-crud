@@ -16,6 +16,7 @@
         </ul>
         <div class="card-body">
           <a href="{{route('comics.index')}}" class="card-link">torna indietro</a>
+          <a href="{{route('comics.edit', $comic->id)}}">modifica fumetto</a>
           
         </div>
       </div>
