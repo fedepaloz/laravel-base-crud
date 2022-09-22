@@ -20,6 +20,7 @@
                             <li class="list-group-item">{{ $comic->sale_date }}</li>
                             <li class="list-group-item">{{ $comic->type }}</li>
                             <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">Vai al dettaglio</a>
+                           
                         </div>
                     </div>
                 @endforeach
