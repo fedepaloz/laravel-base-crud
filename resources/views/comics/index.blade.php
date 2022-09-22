@@ -3,9 +3,37 @@
 
 
 @section('main-content')
-<h1>qui ci vanno tutti i fumetti in lista</h1>
+    <h1>Lista dei fumetti</h1>
 
-<div class="card" style="width: 18rem;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex flex-wrap">
+                @foreach ($comics as $comic)
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ $comic->thumb }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $comic->title }}</h5>
+                            <p class="card-text">{{ $comic->description }}</p>
+                            <li class="list-group-item">{{ $comic->price }}</li>
+                            <li class="list-group-item">{{ $comic->series }}</li>
+                            <li class="list-group-item">{{ $comic->sale_date }}</li>
+                            <li class="list-group-item">{{ $comic->type }}</li>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    {{-- <div class="card" style="width: 18rem;">
     <img class="card-img-top" src={{$comic->thumb}} alt="Card image cap">
     <div class="card-body">
       <a href="{{route('comics.show', $comic->id)}}"><h5 class="card-title">{{$comic->title}}</h5></a>
@@ -22,5 +50,5 @@
       
     </ul>
     
-  </div>
+  </div> --}}
 @endsection
