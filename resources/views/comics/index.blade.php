@@ -3,7 +3,7 @@
 
 
 @section('main-content')
-    <h1>Lista dei fumetti</h1>
+    <h1>Lista dei fumetti</h1><button><a href="{{route('home')}}">torna indietro</a></button>
 
 
     <div class="container">
@@ -19,7 +19,7 @@
                             <li class="list-group-item">{{ $comic->series }}</li>
                             <li class="list-group-item">{{ $comic->sale_date }}</li>
                             <li class="list-group-item">{{ $comic->type }}</li>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">Vai al dettaglio</a>
                         </div>
                     </div>
                 @endforeach

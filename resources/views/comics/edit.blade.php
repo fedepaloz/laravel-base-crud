@@ -3,7 +3,7 @@
 
 
 @section('main-content')
-<h1>crea fumetto</h1>
+<h1>modifica fumetto</h1>
 <button><a href="{{route('home')}}">torna indietro</a></button>
 
 <form action="{{route('comics.store')}}" method="POST">
